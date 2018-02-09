@@ -13,12 +13,14 @@
 package com.billion.application;
 
 import android.app.Application;
+import com.billion.sharedpreferences.SharePreferenceUtil;
 
 public class MainApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
         MainApplicationManger.init(this);
+        SharePreferenceUtil.init(this);
     }
 
 }

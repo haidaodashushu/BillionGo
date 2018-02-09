@@ -33,7 +33,7 @@ public class FloatWidgetManager {
     private final static String TAG = "FloatWidgetManager";
 
     @SuppressLint("ClickableViewAccessibility")
-    public static void show() {
+    public static void show(OnClickListener onClickListener) {
         Application mainApplication = MainApplicationManger.getMainApplication();
         final WindowManager windowManager = (WindowManager)mainApplication.getSystemService(Context.WINDOW_SERVICE);
         final LayoutParams wmParams = new WindowManager.LayoutParams();
@@ -90,12 +90,6 @@ public class FloatWidgetManager {
             }
         });
 
-        mFloatView.setOnClickListener(new OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
+        mFloatView.setOnClickListener(onClickListener);
     }
 }
