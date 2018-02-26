@@ -41,6 +41,9 @@ public class ScrollingActivity extends AppCompatActivity implements OnClickListe
         mBillionGo = findViewById(R.id.fab);
         mBillionGo.setOnClickListener(this);
         updateBillionGoButton();
+        Test test = new Test();
+        test.setFruit("苹果");
+        System.out.println(test.getFruit());
     }
 
     @Override
